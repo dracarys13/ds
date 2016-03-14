@@ -1,2 +1,1 @@
-# ds
-some datastructures in common use
+- [Skip List](searchings/SkipList.h)
