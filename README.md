@@ -1,2 +1,3 @@
 - [Skip List](searchings/SkipList.h)
 - [Splay](searchings/SplayBST.h)
+- [HashTable](searchings/HashTable.h)

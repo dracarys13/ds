@@ -1,7 +1,7 @@
 CC = g++
 CCFLAGS =  -Wall -g
 
-TARGET = SkipListTest SplayBSTTest
+TARGET = SkipListTest SplayBSTTest HashTableTest
 
 all: $(TARGET) 
 
@@ -12,6 +12,9 @@ SkipListTest: SkipListTest.cc SkipList.o
 	$(CC) $(CCFLAGS) -o $@ $^
 
 SplayBSTTest: SplayBSTTest.cc SplayBST.h
+	$(CC) $(CCFLAGS) -o $@ $^
+
+HashTableTest:HashTableTest.cc HashTable.h HashFunc.h
 	$(CC) $(CCFLAGS) -o $@ $^
 
 .PHONY: clean
