@@ -1,6 +1,6 @@
 CC = g++
 CCFLAGS =  -g
-TARGET = EdgeWeightedGraphTest PrimMSTTest
+TARGET = EdgeWeightedGraphTest PrimMSTTest KruskalMSTTest
 all: $(TARGET) 
 
 #############
@@ -16,6 +16,11 @@ PrimMST.o: PrimMST.cc PrimMST.h
 EdgeWeightedGraphTest: EdgeWeightedGraphTest.cc EdgeWeightedGraph.o Edge.o
 	$(CC) $(CCFLAGS) -o $@ $^
 PrimMSTTest: PrimMSTTest.cc PrimMST.o EdgeWeightedGraph.o Edge.o
+	$(CC) $(CCFLAGS) -o $@ $^
+#############
+KruskalMST.o: KruskalMST.cc KruskalMST.h
+	$(CC) $(CCFLAGS) -c $<
+KruskalMSTTest: KruskalMSTTest.cc KruskalMST.o EdgeWeightedGraph.o Edge.o UF.o
 	$(CC) $(CCFLAGS) -o $@ $^
 
 .PHONY: clean
