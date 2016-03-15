@@ -3,3 +3,4 @@
 - [HashTable](searchings/HashTable.h)
 - [Trie](Trie.h)
 - [PrimMST](graph/PrimMST.h)
+- [UnionFind](graph/UF.h)
