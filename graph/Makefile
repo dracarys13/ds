@@ -1,6 +1,6 @@
 CC = g++
 CCFLAGS =  -g
-TARGET = EdgeWeightedGraphTest PrimMSTTest KruskalMSTTest
+TARGET = EdgeWeightedGraphTest PrimMSTTest KruskalMSTTest DijkstraSPTest
 all: $(TARGET) 
 
 #############
@@ -21,6 +21,15 @@ PrimMSTTest: PrimMSTTest.cc PrimMST.o EdgeWeightedGraph.o Edge.o
 KruskalMST.o: KruskalMST.cc KruskalMST.h
 	$(CC) $(CCFLAGS) -c $<
 KruskalMSTTest: KruskalMSTTest.cc KruskalMST.o EdgeWeightedGraph.o Edge.o UF.o
+	$(CC) $(CCFLAGS) -o $@ $^
+############
+DirectedEdge.o: DirectedEdge.cc DirectedEdge.h #有向带权边
+	$(CC) $(CCFLAGS) -c $<
+EdgeWeightedDigraph.o: EdgeWeightedDigraph.cc EdgeWeightedDigraph.h  # 有向带权图
+	$(CC) $(CCFLAGS) -c $<
+DijkstraSP.o: DijkstraSP.cc DijkstraSP.h
+	$(CC) $(CCFLAGS) -c $<
+DijkstraSPTest: DijkstraSPTest.cc DijkstraSP.o EdgeWeightedDigraph.o DirectedEdge.o
 	$(CC) $(CCFLAGS) -o $@ $^
 
 .PHONY: clean

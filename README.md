@@ -5,3 +5,4 @@
 - [PrimMST](graph/PrimMST.h)
 - [UnionFind](graph/UF.h)
 - [KruskalMST](graph/KruskalMST.h)
+- [DijkstraSP](graph/DijkstraSP.h)
