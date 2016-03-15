@@ -1,6 +1,6 @@
 CC = g++
 CCFLAGS = -Wall -g
-TARGET = TrieTest
+TARGET = TrieTest IndexMinPQTest
 
 all: $(TARGET)
 
@@ -11,6 +11,9 @@ Trie.o: Trie.cc Trie.h
 	$(CC) $(CCFLAGS) -o $@ -c $< 
 
 TrieTest: TrieTest.cc Trie.o
+	$(CC) $(CCFLAGS) -o $@ $^ 
+
+IndexMinPQTest: IndexMinPQTest.cc IndexMinPQ.h
 	$(CC) $(CCFLAGS) -o $@ $^ 
 
 .PHONY: clean

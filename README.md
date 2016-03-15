@@ -6,3 +6,4 @@
 - [UnionFind](graph/UF.h)
 - [KruskalMST](graph/KruskalMST.h)
 - [DijkstraSP](graph/DijkstraSP.h)
+- [IndexMinPQ](IndexMinPQ.h)
